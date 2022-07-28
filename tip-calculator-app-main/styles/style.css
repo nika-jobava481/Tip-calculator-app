@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background: #c5e4e7;
+}
+body main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+body main .sys {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+body main .sys > div {
+  width: 300px;
+  height: 320px;
+  border-radius: 20px;
+}
+body main .sys .input-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .sys .input-side input::-webkit-outer-spin-button,
+body main .sys .input-side input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body main .sys .input-side button {
+  background: #00494d;
+  border: none;
+  color: #ffffff;
+  transition: 0.3s;
+  font-size: 24px;
+}
+body main .sys .input-side button:hover {
+  background: #9FE8DF;
+  color: #00494d;
+}
+body main .sys .input-side button.val {
+  background: #26c0ab;
+  color: #00494d;
+}
+body main .sys .input-side .lab {
+  color: #5e7a7d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+body main .sys .input-side .tipamount {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+body main .sys .input-side .tipamount > * {
+  width: 30%;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+body main .sys .input-side .tipamount input {
+  border: #f4fafa;
+  text-align: right;
+  font-size: 24px;
+  color: #7f9c9f;
+  transition: 0.3s;
+  caret-color: #c5e4e7;
+}
+body main .sys .input-side .tipamount input::-moz-placeholder {
+  color: #7f9c9f;
+  text-align: center;
+}
+body main .sys .input-side .tipamount input:-ms-input-placeholder {
+  color: #7f9c9f;
+  text-align: center;
+}
+body main .sys .input-side .tipamount input::placeholder {
+  color: #7f9c9f;
+  text-align: center;
+}
+body main .sys .input-side .tipamount input:active, body main .sys .input-side .tipamount input:hover, body main .sys .input-side .tipamount input:focus {
+  color: #00494d;
+  border: 1px solid #26c0ab;
+  box-shadow: 0 0 1px 1px #9FE8DF;
+}
+body main .sys .input-side .input-cont {
+  position: relative;
+}
+body main .sys .input-side .input-cont .inp {
+  width: 100%;
+  height: 35px;
+  font-size: 24px;
+  box-sizing: border-box;
+  padding: 3px;
+  text-align: right;
+  border: #f4fafa;
+  caret-color: #c5e4e7;
+  color: #7f9c9f;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+body main .sys .input-side .input-cont .inp::-moz-placeholder {
+  color: #7f9c9f;
+}
+body main .sys .input-side .input-cont .inp:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+body main .sys .input-side .input-cont .inp::placeholder {
+  color: #7f9c9f;
+}
+body main .sys .input-side .input-cont .inp:active, body main .sys .input-side .input-cont .inp:hover, body main .sys .input-side .input-cont .inp:focus {
+  color: #00494d;
+  border: 1px solid #26c0ab;
+  box-shadow: 0 0 1px 1px #9FE8DF;
+}
+body main .sys .input-side .input-cont .over {
+  position: absolute;
+  top: 38px;
+  left: 8px;
+}
+body main .sys .input-side .input-cont.show input {
+  border: 1px solid #d83706;
+}
+body main .sys .input-side .input-cont.show::after {
+  content: "Can't be zero";
+  color: #d83706;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 14px;
+}
+body main .sys .output-side {
+  background: #00494d;
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body main .sys .output-side .output .outs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .sys .output-side .output .outs .leftout .nameof {
+  color: #ffffff;
+  font-size: 13px;
+}
+body main .sys .output-side .output .outs .leftout .pers {
+  font-size: 10px;
+  color: #7f9c9f;
+}
+body main .sys .output-side .output .outs .rightout {
+  color: #26c0ab;
+  font-size: 30px;
+}
+body main .sys .output-side .output .outs .rightout img {
+  height: 24px;
+  margin-right: 5px;
+}
+body main .sys button.reset {
+  padding: 7px;
+  background: #26c0ab;
+  color: #00494d;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+body main .sys button.reset:hover {
+  background: #9FE8DF;
+}
+body main .sys button.reset[disabled] {
+  background: #84ffef;
+  color: #2b8388;
+  cursor: not-allowed;
+}
+body main .sys button,
+body main .sys input {
+  cursor: pointer;
+}
+body .attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (max-width: 780px) {
+  body main {
+    gap: 15px;
+  }
+  body main .logo > img {
+    height: 30px;
+  }
+  body main .sys {
+    width: 90%;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+  body main .sys > div {
+    width: 98%;
+  }
+  body main .sys .input-side .tipamount {
+    gap: 10px;
+  }
+  body main .sys .input-side .tipamount > * {
+    width: 45%;
+  }
+  body main .sys .output-side {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body main .sys .output-side .output {
+    margin-bottom: 20px;
+  }
+  body .attribution {
+    font-size: 7px;
+  }
+}
+@media (max-width: 440px) {
+  .sys {
+    width: -webkit-min-content !important;
+    width: -moz-min-content !important;
+    width: min-content !important;
+  }
+  .sys > div {
+    width: 200px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+$fontFam: 'Space Mono', monospace;
+$inpSize: 24px;
+// primary
+$Strong-cyan: #26c0ab;
+// Neutral
+$Very-dark-cyan: #00494d;
+$Dark-grayish-cyan: #5e7a7d;
+$Grayish-cyan: #7f9c9f;
+$Light-grayish-cyan: #c5e4e7;
+$Very-light-grayish-cyan: #f4fafa;
+$Additional-cyan: #9FE8DF;
+$White: #ffffff;
+$Error: #d83706;
+//breakpoints
+$first-br: 780px;
+$second-br: 440px;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: $fontFam;
+    // box-sizing: border-box;
+}
+
+body {
+    background: $Light-grayish-cyan;
+
+    main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+
+        .sys {
+            background: $White;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            &>div {
+                width: 300px;
+                height: 320px;
+                border-radius: 20px;
+            }
+
+            .input-side {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+
+                button {
+                    background: $Very-dark-cyan;
+                    border: none;
+                    color: $White;
+                    transition: .3s;
+                    font-size: $inpSize;
+
+                    &:hover {
+                        background: $Additional-cyan;
+                        color: $Very-dark-cyan;
+                    }
+
+                    &.val {
+                        background: $Strong-cyan;
+                        color: $Very-dark-cyan;
+                    }
+                }
+
+                .lab {
+                    color: $Dark-grayish-cyan;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+
+                .tipamount {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    &>* {
+                        width: 30%;
+                        height: 40px;
+                        box-sizing: border-box;
+                        border-radius: 4px;
+                    }
+
+                    input {
+                        border: $Very-light-grayish-cyan;
+                        text-align: right;
+                        font-size: 24px;
+                        color: $Grayish-cyan;
+                        transition: 0.3s;
+                        caret-color: $Light-grayish-cyan;
+
+                        &::placeholder {
+                            color: $Grayish-cyan;
+                            text-align: center;
+                        }
+
+                        &:active,
+                        &:hover,
+                        &:focus {
+                            color: $Very-dark-cyan;
+                            border: 1px solid $Strong-cyan;
+                            box-shadow: 0 0 1px 1px $Additional-cyan;
+                        }
+                    }
+                }
+
+                .input-cont {
+                    .inp {
+                        width: 100%;
+                        height: 35px;
+                        font-size: 24px;
+                        box-sizing: border-box;
+                        padding: 3px;
+                        text-align: right;
+                        border: $Very-light-grayish-cyan;
+                        caret-color: $Light-grayish-cyan;
+                        color: $Grayish-cyan;
+                        transition: 0.3s;
+                        border-radius: 5px;
+
+                        &::placeholder {
+                            color: $Grayish-cyan;
+                        }
+
+                        &:active,
+                        &:hover,
+                        &:focus {
+                            color: $Very-dark-cyan;
+                            border: 1px solid $Strong-cyan;
+                            box-shadow: 0 0 1px 1px $Additional-cyan;
+                        }
+                    }
+
+                    position: relative;
+
+                    .over {
+                        position: absolute;
+                        top: 38px;
+                        left: 8px;
+                    }
+
+                    &.show {
+                        input {
+                            border: 1px solid $Error;
+                        }
+
+                        &::after {
+                            content: "Can't be zero";
+                            color: $Error;
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .output-side {
+                background: $Very-dark-cyan;
+                box-sizing: border-box;
+                padding: 25px;
+
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+
+                .output {
+                    .outs {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .leftout {
+                            .nameof {
+                                color: $White;
+                                font-size: 13px;
+                            }
+
+                            .pers {
+                                font-size: 10px;
+                                color: $Grayish-cyan;
+                            }
+                        }
+
+                        .rightout {
+                            color: $Strong-cyan;
+                            font-size: 30px;
+
+                            img {
+                                height: 24px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            button.reset {
+                padding: 7px;
+                background: $Strong-cyan;
+                color: $Very-dark-cyan;
+                border: none;
+                border-radius: 5px;
+                transition: .3s;
+
+                &:hover {
+                    background: $Additional-cyan;
+                }
+
+                &[disabled] {
+                    background: #84ffef;
+                    color: #2b8388;
+                    cursor: not-allowed;
+                }
+            }
+
+            button,
+            input {
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+    .attribution {
+        position: absolute;
+        font-size: 11px;
+        text-align: center;
+        bottom: 15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
+
+@media (max-width: $first-br) {
+    body {
+        main {
+            gap: 15px;
+            .logo>img {
+                height: 30px;
+            }
+
+            .sys {
+                width: 90%;
+                &>div {
+                    width: 98%;
+                }
+
+                flex-direction: column;
+                padding: 15px;
+                gap: 10px;
+
+                .input-side {
+                    .tipamount {
+                        gap: 10px;
+
+                        &>* {
+                            width: 45%;
+                        }
+                    }
+                }
+
+                .output-side {
+                    height: max-content;
+
+                    .output {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        .attribution { 
+            font-size: 7px;
+        }
+    }
+}
+
+@media (max-width: $second-br) {
+    .sys {
+        width: min-content !important;
+        &>div {
+            width: 200px !important;
+        }
+    }
+}

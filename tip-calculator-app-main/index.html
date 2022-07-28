@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style-min.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <main>
+    <div class="logo"><img src="./images/logo.svg" alt=""></div>
+    <div class="sys">
+      <div class="input-side">
+        <div class="input-cont billinpcont">
+          <div class="lab">Bill</div>
+          <input type="number" name="Bill" class="inp billinp" min="0" placeholder="0">
+          <div class="over"><img src="./images/icon-dollar.svg" alt="...dollar sign"></div>
+        </div>
+        <div class="tippercentage">
+          <div class="lab">Select&nbsp;Tip&nbsp;%</div>
+          <div class="tipamount">
+            <button class="btn insize" value="5">5%</button>
+            <button class="btn insize" value="10">10%</button>
+            <button class="btn insize" value="15">15%</button>
+            <button class="btn insize" value="25">25%</button>
+            <button class="btn insize" value="50">50%</button>
+            <input type="number" name="CustomTip" placeholder="Custom" min="0" class="customtip insize">
+          </div>
+        </div>
+        <div class="input-cont customersinpcont">
+          <div class="lab">Number&nbsp;of&nbsp;People</div>
+          <input type="number" name="Customers" class="inp customersinp" placeholder="0"  onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+          <div class="over"><img src="./images/icon-person.svg" alt="...person sign"></div>
+        </div>
+      </div>
+      <div class="output-side">
+        <div class="output">
+          <div class="tipout outs">
+            <div class="leftout">
+              <div class="nameof">Tip Amount</div>
+              <div class="pers">/ person</div>
+            </div>
+            <div class="rightout tipamountout"><img src="./images/cyan-icon-dollar.svg" alt="...dollar sign">0.00</div>
+          </div>
+          <div class="totalout outs">
+            <div class="leftout">
+              <div class="nameof">Total</div>
+              <div class="pers">/ person</div>
+            </div>
+            <div class="rightout totalamountout"><img src="./images/cyan-icon-dollar.svg" alt="...dollar sign">0.00</div>
+          </div>
+        </div>
+        <button class="reset" disabled>RESET</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/nika-jobava481">Nika Jobava</a>.
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
